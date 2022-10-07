@@ -105,10 +105,6 @@ export const App: FC = () => {
     setFirstVisibleRow(0);
   }, [orderKey, orderDirection, rowData]);
 
-  useEffect(() => {
-    setRows(Object.entries(rowData));
-  }, [rowData]);
-
   const handleChangeRow = useCallback((id: string, nextVal: Partial<RowData>) => {
     setEditedRowData((prevData) => ({
       ...prevData,

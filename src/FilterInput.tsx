@@ -12,7 +12,7 @@ export const FilterInput: FC<Props> = memo(({ field, value, onChange }) => {
 
   const handleChange = useCallback(debounce((v: string) => {
     onChange(field, v)
-  }, 1000), [onChange]);
+  }, 1000), [field, onChange]);
 
   return (
     <div style={{ display: 'flex' }}>
